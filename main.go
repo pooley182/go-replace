@@ -243,7 +243,7 @@ func handleSpecialCliOptions(args []string) {
 	// --version
 	if opts.ShowVersion {
 		fmt.Printf("go-replace version %s (%s)\n", gitTag, gitCommit)
-		fmt.Printf("Copyright (C) 2022 %s (%s)\n", Maintainer, Author)
+		fmt.Printf("Copyright (C) 2025 %s (%s)\n", Maintainer, Author)
 		os.Exit(0)
 	}
 
