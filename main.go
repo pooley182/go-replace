@@ -14,7 +14,8 @@ import (
 )
 
 const (
-	Author = "webdevops.io"
+	Author     = "webdevops.io"
+	Maintainer = "github.com/pooley182"
 )
 
 var (
@@ -242,7 +243,7 @@ func handleSpecialCliOptions(args []string) {
 	// --version
 	if opts.ShowVersion {
 		fmt.Printf("go-replace version %s (%s)\n", gitTag, gitCommit)
-		fmt.Printf("Copyright (C) 2022 %s\n", Author)
+		fmt.Printf("Copyright (C) 2022 %s (%s)\n", Maintainer, Author)
 		os.Exit(0)
 	}
 

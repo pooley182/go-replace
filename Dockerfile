@@ -1,7 +1,7 @@
 #############################################
 # Build
 #############################################
-FROM --platform=$BUILDPLATFORM golang:1.19-alpine as build
+FROM --platform=$BUILDPLATFORM golang:1.24-alpine as build
 
 RUN apk upgrade --no-cache --force
 RUN apk add --update build-base make git
@@ -9,7 +9,7 @@ RUN apk add --update build-base make git
 WORKDIR /go/src/github.com/webdevops/go-replace
 
 # Dependencies
-COPY go.mod go.sum .
+COPY go.mod go.sum ./
 RUN go mod download
 
 # Compile
