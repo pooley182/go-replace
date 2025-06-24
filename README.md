@@ -1,14 +1,13 @@
 # go-replace
 
-[![GitHub release](https://img.shields.io/github/release/webdevops/go-replace.svg)](https://github.com/webdevops/go-replace/releases)
-[![license](https://img.shields.io/github/license/webdevops/go-replace.svg)](https://github.com/webdevops/go-replace/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/webdevops/go-replace.svg?branch=master)](https://travis-ci.org/webdevops/go-replace)
-[![Github All Releases](https://img.shields.io/github/downloads/webdevops/go-replace/total.svg)]()
-[![Github Releases](https://img.shields.io/github/downloads/webdevops/go-replace/latest/total.svg)]()
+[![GitHub release](https://img.shields.io/github/release/pooley182/go-replace.svg)](https://github.com/pooley182/go-replace/releases)
+[![license](https://img.shields.io/github/license/pooley182/go-replace.svg)](https://github.com/pooley182/go-replace/blob/master/LICENSE)
+
 
 Cli utility for replacing text in files, written in golang and compiled for usage in Docker images
 
-Inspired by https://github.com/piranha/goreplace
+Forked from https://github.com/webdevops/go-replace \
+Originally inspired by https://github.com/piranha/goreplace
 
 ## Features
 
@@ -118,16 +117,7 @@ Result file `daemon.conf`:
 ## Installation
 
 ```bash
-GOREPLACE_VERSION=22.9.0 \
-&& wget -O /usr/local/bin/go-replace https://github.com/webdevops/go-replace/releases/download/$GOREPLACE_VERSION/go-replace.linux.amd64 \
+GOREPLACE_VERSION=22.10.1 \
+&& wget -O /usr/local/bin/go-replace https://github.com/pooley182/go-replace/releases/download/$GOREPLACE_VERSION/go-replace.linux.amd64 \
 && chmod +x /usr/local/bin/go-replace
 ```
-
-
-## Docker images
-
-| Image                          | Description                                     |
-|:-------------------------------|:------------------------------------------------|
-| `webdevops/go-replace:latest`  | Latest release, binary only                     |
-| `webdevops/go-replace:master`  | Current development version in branch `master`  |
-| `webdevops/go-replace:develop` | Current development version in branch `develop` |

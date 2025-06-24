@@ -6,7 +6,7 @@ FROM --platform=$BUILDPLATFORM golang:1.24-alpine AS build
 RUN apk upgrade --no-cache --force
 RUN apk add --update build-base make git
 
-WORKDIR /go/src/github.com/webdevops/go-replace
+WORKDIR /go/src/github.com/pooley182/go-replace
 
 # Dependencies
 COPY go.mod go.sum ./
@@ -24,7 +24,7 @@ RUN GOOS=${TARGETOS} GOARCH=${TARGETARCH} make build
 FROM gcr.io/distroless/static AS test
 USER 0:0
 WORKDIR /app
-COPY --from=build /go/src/github.com/webdevops/go-replace/go-replace .
+COPY --from=build /go/src/github.com/pooley182/go-replace/go-replace .
 RUN ["./go-replace", "--help"]
 
 #############################################
