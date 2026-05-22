@@ -6,7 +6,7 @@ import (
 	"strings"
 	"text/template"
 
-	sprig "github.com/Masterminds/sprig"
+	sprig "github.com/Masterminds/sprig/v3"
 )
 
 type templateData struct {
